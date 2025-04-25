@@ -2128,7 +2128,7 @@ button,
     -ms-flex-shrink: 1;
     flex-shrink: 1;
     width: 50%; }
-  #banner .image {
+ /* #banner .image {
     -moz-flex-grow: 0;
     -webkit-flex-grow: 0;
     -ms-flex-grow: 0;
@@ -2150,7 +2150,24 @@ button,
       -webkit-object-position: center;
       -ms-object-position: center;
       object-position: center;
-      width: 100%; }
+      width: 100%; }*/
+  #banner .image {
+  -moz-flex-grow: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -moz-flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  display: block;
+  margin: 0 0 2em 4em;
+  width: 35%; /* smaller container */}
+    #banner .image img {
+      width: 100%;  /* fill the new smaller container */
+      height: auto; /* keep proportions (IMPORTANT change here) */
+      object-fit: contain; /* better for logos instead of cover */
+      object-position: center;}
   @media screen and (orientation: portrait) {
     #banner {
       -moz-flex-direction: column-reverse;
