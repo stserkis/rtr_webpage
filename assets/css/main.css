@@ -2153,10 +2153,6 @@ button,
       -webkit-object-position: center;
       -ms-object-position: center;
       object-position: center;}
-  #banner .object {
-     background: none !important;
-     background-image: none !important;
-  }
 
   @media screen and (orientation: portrait) {
     #banner {
