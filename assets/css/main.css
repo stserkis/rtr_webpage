@@ -2188,28 +2188,22 @@ button,
   @media screen and (orientation: portrait) and (max-width: 480px) {
     #banner .image {
       max-height: 35vh; } }
+  @media screen and (orientation: portrait) and (min-width: 481px) {
+  #banner .image {
+    width: 100%;
+    margin: 0 0 4em 0;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  }
 
   @media screen and (orientation: landscape) and (max-width: 1024px) {
   #banner .image {
     width: 40%;
+    border-radius: 0;
     aspect-ratio: 1 / 1;
-    margin: 0 auto 2em auto;
-  }
-  }
-  @media screen and (orientation: portrait) and (min-width: 481px) and (max-width: 1024px) {
-  #banner {
-    flex-direction: column-reverse;
-  }
-  #banner .content,
-  #banner .image {
-    width: 100%;
-    flex-grow: 0;
-    flex-shrink: 0;
-  }
-  #banner .image {
-    height: auto;
-    max-height: 50vh;
-    aspect-ratio: 1/1;
     margin: 0 auto 2em auto;
   }
   }
