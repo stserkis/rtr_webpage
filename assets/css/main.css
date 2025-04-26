@@ -2109,25 +2109,83 @@ button,
         right: -0.5em;
         top: 0; } }
 
+
 /* Banner */
 #banner {
   padding: 6em 0 4em 0 ;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
-  display: flex; }
-  #banner h1 {
-    margin-top: -0.125em; }
+  display: flex;
+}
+#banner h1 {
+  margin-top: -0.125em;
+}
+#banner .content {
+  -moz-flex-grow: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -moz-flex-shrink: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 50%;
+}
+#banner .image {
+  -moz-flex-grow: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -moz-flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+  display: block;
+  margin: 0 0 2em 4em;
+  width: 23.8%;
+  aspect-ratio: 1 / 1;
+}
+#banner .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0 !important;
+  -moz-object-fit: cover;
+  -webkit-object-fit: cover;
+  -ms-object-fit: cover;
+  object-fit: contain;
+  -moz-object-position: center;
+  -webkit-object-position: center;
+  -ms-object-position: center;
+  object-position: center;
+  overflow: visible !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+  display: block;
+}
+
+@media screen and (orientation: portrait) {
+  #banner {
+    -moz-flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #banner h1 br {
+    display: none;
+  }
   #banner .content {
-    -moz-flex-grow: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-grow: 1;
-    flex-grow: 1;
-    -moz-flex-shrink: 1;
-    -webkit-flex-shrink: 1;
-    -ms-flex-shrink: 1;
-    flex-shrink: 1;
-    width: 50%; }
+    -moz-flex-grow: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-grow: 0;
+    flex-grow: 0;
+    -moz-flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    flex-shrink: 0;
+    width: 100%;
+  }
   #banner .image {
     -moz-flex-grow: 0;
     -webkit-flex-grow: 0;
@@ -2137,83 +2195,44 @@ button,
     -webkit-flex-shrink: 0;
     -ms-flex-shrink: 0;
     flex-shrink: 0;
-    display: block;
-    margin: 0 0 2em 4em;
-    width: 23.8%;
-    aspect-ratio: 1 / 1;}
-    #banner .image img {
-      height: 100%;
-      width: 100%;
-      border-radius: 0;
-      -moz-object-fit: cover;
-      -webkit-object-fit: cover;
-      -ms-object-fit: cover;
-      object-fit: contain;
-      -moz-object-position: center;
-      -webkit-object-position: center;
-      -ms-object-position: center;
-      object-position: center;}
-
-  @media screen and (orientation: portrait) {
-    #banner {
-      -moz-flex-direction: column-reverse;
-      -webkit-flex-direction: column-reverse;
-      -ms-flex-direction: column-reverse;
-      flex-direction: column-reverse;
-      align-items: center;
-    }
-    #banner h1 br {
-      display: none;
-    }
-    #banner .content {
-      -moz-flex-grow: 0;
-      -webkit-flex-grow: 0;
-      -ms-flex-grow: 0;
-      flex-grow: 0;
-      -moz-flex-shrink: 0;
-      -webkit-flex-shrink: 0;
-      -ms-flex-shrink: 0;
-      flex-shrink: 0;
-      width: 100%;
-    }
-    #banner .image {
-      -moz-flex-grow: 0;
-      -webkit-flex-grow: 0;
-      -ms-flex-grow: 0;
-      flex-grow: 0;
-      -moz-flex-shrink: 0;
-      -webkit-flex-shrink: 0;
-      -ms-flex-shrink: 0;
-      flex-shrink: 0;
-      margin: 0 0 4em 0;
-      width: 65%;
-      align-self: center;
-      aspect-ratio: auto; /* 🔥 changed from 1/1 to auto */
-      border-radius: 0;
-      overflow: hidden;
-    }
-    #banner .image img {
-      width: 100%;
-      height: auto; /* 🔥 changed from 100% to auto */
-      object-fit: contain; /* 🔥 changed from cover to contain */
-      object-position: center;
-      border-radius: 0;
-    }
+    margin: 0 0 4em 0;
+    width: 65%;
+    align-self: center;
+    aspect-ratio: auto; /* 🔥 changed from 1/1 to auto */
+    border-radius: 0;
+    overflow: hidden;
   }
+  #banner .image img {
+    width: 100%;
+    height: auto; /* 🔥 changed from 100% to auto */
+    object-fit: contain; /* 🔥 changed from cover to contain */
+    object-position: center;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+    display: block;
+  }
+}
 
 @media screen and (orientation: portrait) and (max-width: 480px) {
-    #banner .image {
-      aspect-ratio: auto;
-      width: 65%;
-      max-height: none;
-      margin: 0 auto 4em auto;
-    }
-    #banner .image img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      object-position: center;
-    }
+  #banner .image {
+    aspect-ratio: auto;
+    width: 65%;
+    max-height: none;
+    margin: 0 auto 4em auto;
+  }
+  #banner .image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+    display: block;
+  }
 }
 
 @media screen and (orientation: landscape) and (max-width: 1024px) {
@@ -2221,13 +2240,11 @@ button,
     flex-direction: column-reverse;
     align-items: center;
   }
-
   #banner .content {
     flex-grow: 0;
     flex-shrink: 0;
     width: 100%;
   }
-
   #banner .image {
     flex-grow: 0;
     flex-shrink: 0;
@@ -2238,7 +2255,6 @@ button,
     overflow: visible; /* <<< important: don't crop! */
     aspect-ratio: auto; /* optional, you can even delete this line */
   }
-
   #banner .image img {
     width: 100%;
     height: auto;
@@ -2246,10 +2262,14 @@ button,
     max-height: 100%;
     object-fit: contain;
     object-position: center;
-    border-radius: 0; /* no round corners */
-    display: block; /* optional: prevent small layout glitches */
+    border-radius: 0 !important;
+    overflow: visible !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+    display: block;
   }
 }
+
 
 /* Footer */
 #footer .copyright {
