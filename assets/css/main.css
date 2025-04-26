@@ -2186,7 +2186,7 @@ button,
       -ms-flex-shrink: 0;
       flex-shrink: 0;
       margin: 0 0 4em 0;
-      width: 80%;
+      width: 65%;
       align-self: center;
       aspect-ratio: 1 / 1;
       border-radius: 0;
@@ -2204,7 +2204,7 @@ button,
 @media screen and (orientation: portrait) and (max-width: 480px) {
     #banner .image {
       aspect-ratio: auto;
-      width: 80%; /* instead of forcing max-height */
+      width: 65%; /* instead of forcing max-height */
       max-height: none; /* no max-height restriction */
       margin: 0 auto 4em auto;
     }
@@ -2216,17 +2216,37 @@ button,
     }
 }
 
-@media screen and (orientation: landscape) and (max-width: 1024px) {
+@media screen and (orientation: landscape) and (max-width: 768px) {
     #banner .image {
       flex-grow: 0;
       flex-shrink: 0;
       flex-basis: auto;
-      width: 25%; /* this now actually works */
+      width: 50%; /* 🔥 Larger logo for landscape phones */
       border-radius: 0;
       aspect-ratio: 1 / 1;
-      margin: 0 0 2em 0; /* no auto margins, you did not ask for centering */
+      margin: 0 auto 2em auto; /* center it for phones */
       overflow: hidden;
-      align-self: flex-start; /* important: do not center */
+    }
+    #banner .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 0;
+    }
+}
+
+@media screen and (orientation: landscape) and (min-width: 769px) and (max-width: 1024px) {
+    #banner .image {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: auto;
+      width: 25%; /* 🔥 Smaller logo for landscape tablets */
+      border-radius: 0;
+      aspect-ratio: 1 / 1;
+      margin: 0 0 2em 0; /* no center, left aligned */
+      overflow: hidden;
+      align-self: flex-start; /* stay on the left */
     }
     #banner .image img {
       width: 100%;
