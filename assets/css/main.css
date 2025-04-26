@@ -2201,8 +2201,10 @@ button,
 
 @media screen and (orientation: portrait) and (max-width: 480px) {
     #banner .image {
-      aspect-ratio: auto; /* cancel 1/1 for phones */
-      max-height: 35vh;
+      aspect-ratio: auto;
+      width: 80%; /* instead of forcing max-height */
+      max-height: none; /* no max-height restriction */
+      margin: 0 auto 4em auto;
     }
     #banner .image img {
       width: 100%;
