@@ -2160,6 +2160,7 @@ button,
       -webkit-flex-direction: column-reverse;
       -ms-flex-direction: column-reverse;
       flex-direction: column-reverse;
+      align-items: center;
     }
     #banner h1 br {
       display: none;
@@ -2217,11 +2218,15 @@ button,
 
 @media screen and (orientation: landscape) and (max-width: 1024px) {
     #banner .image {
-      width: 25%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: auto;
+      width: 25%; /* this now actually works */
       border-radius: 0;
       aspect-ratio: 1 / 1;
-      margin: 0 auto 2em auto;
+      margin: 0 0 2em 0; /* no auto margins, you did not ask for centering */
       overflow: hidden;
+      align-self: flex-start; /* important: do not center */
     }
     #banner .image img {
       width: 100%;
