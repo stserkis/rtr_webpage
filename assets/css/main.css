@@ -2197,17 +2197,18 @@ button,
     display: flex;
     flex-direction: column-reverse;
   }
-  #banner .content,
-  #banner .image {
+  #banner .content {
     width: 100%;
-    flex-grow: 0;
     flex-shrink: 0;
+    flex-grow: 0;
   }
   #banner .image {
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
     height: auto;
     aspect-ratio: 1 / 1;
-    margin: 0 0 4em 0;
-    min-height: 18em;
+    margin: 0 0 2em 0;
   }
   #banner .image img {
     width: 100%;
