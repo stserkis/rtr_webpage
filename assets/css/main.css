@@ -94,7 +94,7 @@ body {
 /* Type */
 body, input, select, textarea {
   color: #7f888f;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lora", sans-serif;
   font-size: 13pt;
   font-weight: 400;
   line-height: 1.65; }
@@ -134,7 +134,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   color: #3d4449;
-  font-family: "Roboto Slab", serif;
+  font-family: "Lora", serif;
   font-weight: 700;
   line-height: 1.5;
   margin: 0 0 1em 0; }
@@ -992,7 +992,7 @@ section.special, article.special {
   text-align: center; }
 
 header p {
-  font-family: "Roboto Slab", serif;
+  font-family: "Lora", serif;
   font-size: 1em;
   font-weight: 400;
   letter-spacing: 0.075em;
@@ -1501,7 +1501,7 @@ button,
   color: #f56a6a !important;
   cursor: pointer;
   display: inline-block;
-  font-family: "Roboto Slab", serif;
+  font-family: "Lora", serif;
   font-size: 0.8em;
   font-weight: 700;
   height: 3.5em;
@@ -2089,7 +2089,7 @@ button,
   #header .logo {
     border-bottom: 0;
     color: inherit;
-    font-family: "Roboto Slab", serif;
+    font-family: "Lora", serif;
     font-size: 1.125em; }
   #header .icons {
     text-align: right; }
@@ -2139,19 +2139,20 @@ button,
     flex-shrink: 0;
     display: block;
     margin: 0 0 2em 4em;
-    width: 25%; }
+    width: 26%;
+    aspect-ratio: 1 / 1;}
     #banner .image img {
       height: 100%;
+      width: 100%;
       border-radius: 0;
       -moz-object-fit: cover;
       -webkit-object-fit: cover;
       -ms-object-fit: cover;
-      object-fit: cover;
+      object-fit: contain;
       -moz-object-position: center;
       -webkit-object-position: center;
       -ms-object-position: center;
-      object-position: center;
-      width: 100%; }
+      object-position: center;}
   @media screen and (orientation: portrait) {
     #banner {
       -moz-flex-direction: column-reverse;
@@ -2202,7 +2203,7 @@ button,
   -ms-user-select: none;
   user-select: none;
   color: #3d4449;
-  font-family: "Roboto Slab", serif;
+  font-family: "Lora", serif;
   font-weight: 400;
   letter-spacing: 0.075em;
   list-style: none;
