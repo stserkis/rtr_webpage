@@ -2220,7 +2220,7 @@ button,
   #banner .image {
     flex-grow: 0;
     flex-shrink: 0;
-    width: 50%; /* or 45% if you want a bit smaller */
+    width: 40%; /* or 45% if you want a bit smaller */
     margin: 0 auto 2em auto; /* center horizontally */
     aspect-ratio: auto; /* 🔥 allow natural shape */
     overflow: hidden;
@@ -2241,7 +2241,7 @@ button,
   #banner .image {
     flex-grow: 0;
     flex-shrink: 0;
-    width: 20%; /* smaller than phones */
+    width: 22%; /* smaller than phones */
     margin: 0 0 2em 0; /* left aligned */
     aspect-ratio: auto; /* 🔥 natural shape */
     overflow: hidden;
