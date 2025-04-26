@@ -2153,6 +2153,7 @@ button,
       -webkit-object-position: center;
       -ms-object-position: center;
       object-position: center;}
+
   @media screen and (orientation: portrait) {
     #banner {
       -moz-flex-direction: column-reverse;
@@ -2193,6 +2194,7 @@ button,
 
   @media screen and (orientation: portrait) and (min-width: 481px) and (max-width: 1024px) {
   #banner {
+    display: flex;
     flex-direction: column-reverse;
   }
   #banner .content,
