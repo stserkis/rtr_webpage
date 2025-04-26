@@ -2216,49 +2216,6 @@ button,
     }
 }
 
-@media screen and (orientation: landscape) and (max-width: 768px) {
-  #banner .image {
-    flex-grow: 0;
-    flex-shrink: 0;
-    width: 40%; /* or 45% if you want a bit smaller */
-    margin: 0 auto 2em auto; /* center horizontally */
-    aspect-ratio: auto; /* 🔥 allow natural shape */
-    overflow: hidden;
-    border-radius: 0;
-    align-self: center;
-  }
-
-  #banner .image img {
-    width: 100%;
-    height: auto; /* 🔥 allow natural height */
-    object-fit: contain; /* 🔥 full logo, no cut */
-    object-position: center;
-    border-radius: 0;
-  }
-}
-
-@media screen and (orientation: landscape) and (min-width: 769px) and (max-width: 1024px) {
-  #banner .image {
-    flex-grow: 0;
-    flex-shrink: 0;
-    width: 22%; /* smaller than phones */
-    margin: 0 0 2em 0; /* left aligned */
-    aspect-ratio: auto; /* 🔥 natural shape */
-    overflow: hidden;
-    border-radius: 0;
-    align-self: flex-start;
-  }
-
-  #banner .image img {
-    width: 100%;
-    height: auto; /* 🔥 allow natural height */
-    object-fit: contain; /* 🔥 full logo, no cut */
-    object-position: center;
-    border-radius: 0;
-  }
-}
-
-
 
 /* Footer */
 #footer .copyright {
