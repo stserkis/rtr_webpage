@@ -190,9 +190,9 @@ sup {
 
 blockquote {
   font-style: italic;
-  margin: 0 0 2em 0;
-  padding: 0.5em 5em;
-  margin-bottom: 0em;}
+  margin: 0.2em 0;
+  padding: 0.5em 4em;
+  text-align: center;}
 
 code {
   background: rgba(230, 235, 237, 0.25);
