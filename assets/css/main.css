@@ -8,7 +8,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote, maintext
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
@@ -192,7 +192,14 @@ blockquote {
   font-style: italic;
   margin: 0.2em 0;
   padding: 0.5em 4em;
-  text-align: center;}
+  text-align: center;
+  line-height: 1.2;}
+
+.maintext {
+  text-indent: 1.4em;
+  margin-bottom: 0em;
+  line-height: 1.2;
+}
 
 code {
   background: rgba(230, 235, 237, 0.25);
