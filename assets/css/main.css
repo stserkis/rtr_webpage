@@ -197,8 +197,16 @@ blockquote {
 
 .maintext {
   text-indent: 1.4em;
-  margin-bottom: 0em;
+  margin-bottom: 0;
   line-height: 1.2;
+
+  text-align: justify;        /* full justification */
+  hyphens: auto;              /* enable automatic hyphenation */
+  -webkit-hyphens: auto;      /* Safari/iOS */
+  -ms-hyphens: auto;          /* very old IE/EdgeHTML */
+
+  overflow-wrap: break-word;  /* fallback to avoid overflow; lets hyphens work first */
+  word-break: normal;         /* keep normal word breaking */
 }
 
 code {
