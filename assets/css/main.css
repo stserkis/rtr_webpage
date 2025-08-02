@@ -200,13 +200,14 @@ blockquote {
   margin-bottom: 0;
   line-height: 1.2;
 
-  text-align: justify;        /* full justification */
-  hyphens: auto;              /* enable automatic hyphenation */
-  -webkit-hyphens: auto;      /* Safari/iOS */
-  -ms-hyphens: auto;          /* very old IE/EdgeHTML */
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
 
-  overflow-wrap: break-word;  /* fallback to avoid overflow; lets hyphens work first */
-  word-break: normal;         /* keep normal word breaking */
+  word-break: normal;
+  overflow-wrap: normal;
+  min-width: 0;
 }
 
 code {
@@ -1870,6 +1871,7 @@ button,
   -webkit-flex-shrink: 1;
   -ms-flex-shrink: 1;
   flex-shrink: 1;
+  min-width: 0;
   width: 100%; }
   #main > .inner {
     padding: 0 6em 0.1em 6em ;
