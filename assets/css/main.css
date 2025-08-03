@@ -1935,6 +1935,7 @@ button,
   #search form input[type="text"] {
     padding-right: 2.75em; }
 
+
 /* Sidebar */
 #search form {
   text-decoration: none;
@@ -1971,13 +1972,19 @@ button,
   top: 0;
   width: 2em;
 }
-#search form input[type="text"] { padding-right: 2.75em; }
+#search form input[type="text"] {
+  padding-right: 2.75em;
+}
 
-/* ===================== DESKTOP / LAPTOPS (≥1025px) ===================== */
-/* Open by default; width 26em */
 #sidebar {
-  -moz-flex-grow: 0; -webkit-flex-grow: 0; -ms-flex-grow: 0; flex-grow: 0;
-  -moz-flex-shrink: 0; -webkit-flex-shrink: 0; -ms-flex-shrink: 0; flex-shrink: 0;
+  -moz-flex-grow: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -moz-flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
   -moz-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   -webkit-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   -ms-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
@@ -1986,9 +1993,10 @@ button,
   font-size: 0.9em;
   position: relative;
   width: 26em;
-  margin-left: 0; /* OPEN by default on desktop */
 }
-#sidebar h2 { font-size: 1.38889em; }
+#sidebar h2 {
+  font-size: 1.38889em;
+}
 #sidebar > .inner {
   padding: 2.22222em 2.22222em 2.44444em 2.22222em;
   position: relative;
@@ -1999,8 +2007,14 @@ button,
   margin: 0 0 3.5em 0;
   padding: 0 0 3.5em 0;
 }
-#sidebar > .inner > * > :last-child { margin-bottom: 0; }
-#sidebar > .inner > *:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+#sidebar > .inner > * > :last-child {
+  margin-bottom: 0;
+}
+#sidebar > .inner > *:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 #sidebar > .inner > .alt {
   background-color: #eff1f2;
   border-bottom: 0;
@@ -2008,11 +2022,12 @@ button,
   padding: 2.22222em;
   width: calc(100% + 4.44444em);
 }
-
-/* Toggle aligned to sidebar edge */
 #sidebar .toggle {
   text-decoration: none;
-  -moz-transition: left 0.5s ease; -webkit-transition: left 0.5s ease; -ms-transition: left 0.5s ease; transition: left 0.5s ease;
+  -moz-transition: left 0.5s ease;
+  -webkit-transition: left 0.5s ease;
+  -ms-transition: left 0.5s ease;
+  transition: left 0.5s ease;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   border: 0;
   display: block;
@@ -2030,10 +2045,16 @@ button,
   z-index: 10000;
 }
 #sidebar .toggle:before {
-  -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   display: inline-block;
-  font-style: normal; font-variant: normal; text-rendering: auto; line-height: 1;
-  text-transform: none !important; font-family: 'Font Awesome 5 Free'; font-weight: 900;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  text-transform: none !important;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
 }
 #sidebar .toggle:before {
   content: '\f0c9';
@@ -2046,43 +2067,21 @@ button,
   top: 0;
   width: inherit;
 }
-
-/* When user closes it on desktop */
-#sidebar.inactive { margin-left: -26em; }
-
-/* ===================== TABLETS (≤1024px) ===================== */
-/* Overlay + closed by default; width 24em */
-@media screen and (max-width: 1024px) {
+#sidebar.inactive {
+  margin-left: -26em;
+}
+@media screen and (max-width: 1680px) {
   #sidebar {
-    box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175);
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    z-index: 10000;
-
     width: 24em;
-    margin-left: -24em; /* CLOSED by default on tablets */
   }
-  /* Open when NOT inactive (your burger removes .inactive to open) */
-  #sidebar:not(.inactive) { margin-left: 0; }
-
-  #sidebar.inactive { box-shadow: none; }
   #sidebar > .inner {
-    -webkit-overflow-scrolling: touch;
-    height: 100%;
-    left: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: absolute;
-    top: 0;
+    padding: 1.66667em 1.66667em 1.33333em 1.66667em;
     width: 24em;
   }
-  #sidebar > .inner:after {
-    content: '';
-    display: block;
-    height: 4em;
-    width: 100%;
+  #sidebar > .inner > .alt {
+    margin: -1.66667em 0 3.33333em -1.66667em;
+    padding: 1.66667em;
+    width: calc(100% + 3.33333em);
   }
   #sidebar .toggle {
     height: 6.25em;
@@ -2093,15 +2092,51 @@ button,
   }
   #sidebar .toggle:before {
     font-size: 1.5rem;
+  }
+  #sidebar.inactive {
+    margin-left: -24em;
+  }
+}
+@media screen and (max-width: 1280px) {
+  #sidebar {
+    box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+  }
+  #sidebar.inactive {
+    box-shadow: none;
+  }
+  #sidebar > .inner {
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+  }
+  #sidebar > .inner:after {
+    content: '';
+    display: block;
+    height: 4em;
+    width: 100%;
+  }
+  #sidebar .toggle {
+    text-indent: 6em;
+    width: 6em;
+  }
+  #sidebar .toggle:before {
+    font-size: 1.5rem;
     margin-left: -0.4375em;
   }
-
-  body.is-preload #sidebar { display: none; }
+  body.is-preload #sidebar {
+    display: none;
+  }
 }
-
-/* ===================== PHONES (≤736px) ===================== */
 @media screen and (max-width: 736px) {
-  /* (still overlay + closed by default inherited from ≤1024px) */
   #sidebar .toggle {
     text-indent: 7.25em;
     width: 7.25em;
@@ -2125,6 +2160,18 @@ button,
   }
 }
 
+/* Ensure Sidebar Visibility on Desktop (>1280px) */
+@media screen and (min-width: 1281px) {
+  #sidebar {
+    display: block;
+    margin-left: 0;
+    position: relative;
+    width: 26em;
+  }
+  body.is-preload #sidebar {
+    display: block;
+  }
+}
 
 
 /* Header */
