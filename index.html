@@ -236,6 +236,18 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-
+	<script>
+	  window.addEventListener('load', () => {
+		// Remove is-preload to prevent display: none
+		document.body.classList.remove('is-preload');
+		// Remove inactive for desktop viewports to ensure visibility
+		if (window.innerWidth > 1280) {
+		  const sidebar = document.querySelector('#sidebar');
+		  if (sidebar) {
+			sidebar.classList.remove('inactive');
+		  }
+		}
+	  });
+	</script>
 	</body>
 </html>
