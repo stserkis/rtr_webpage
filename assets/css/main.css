@@ -137,6 +137,11 @@ p {
   -ms-hyphens: auto;
 }
 
+p.maintext {
+  text-indent: 1.2em;
+  margin-bottom: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: #3d4449;
   font-family: "Lora", serif;
