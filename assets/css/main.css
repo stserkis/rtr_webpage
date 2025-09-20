@@ -42,6 +42,45 @@ blockquote, q {
     content: '';
     content: none; }
 
+#footnotes .inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  margin-top: 2em;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;        /* exact vertical spacing between footnotes */
+}
+
+#footnotes p {
+  margin: 0 !important;  /* kill default <p> margins so only gap applies */
+  font-size: 0.8em;      /* match bibliography */
+  line-height: 1.2;      /* readable but compact */
+}
+
+#footnotes .fn-label {
+  vertical-align: super;
+  font-size: 0.8em;
+  color: #7f888f;
+  font-weight: 700;
+}
+
+#bibliography {
+  margin-top: 2em;
+  line-height: 1.2;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+#bibliography p {
+  margin: 0;
+  font-size: 0.8em;    /* match footnotes */
+  line-height: 1.2;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -199,10 +238,22 @@ sup {
   top: -0.5em; }
 
 blockquote {
-  border-left: solid 3px rgba(210, 215, 217, 0.75);
   font-style: italic;
-  margin: 0 0 2em 0;
-  padding: 0.5em 0 0.5em 2em; }
+  margin: 1em 4em 1em 4em;
+  text-align: center;
+  line-height: 1.4;
+
+  quotes: "“" "”" "‘" "’";
+}
+
+blockquote::before {
+  content: open-quote;
+}
+
+blockquote::after {
+  content: close-quote;
+  margin-left: -0.3em;   /* tuck it in slightly */
+}
 
 code {
   background: rgba(230, 235, 237, 0.25);
