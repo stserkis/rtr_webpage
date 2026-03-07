@@ -246,6 +246,14 @@ blockquote {
   quotes: "“" "”" "‘" "’";
 }
 
+intervention {
+  display: block;
+  font-style: italic;
+  margin: 1em 4em 1em 4em;
+  text-align: center;
+  line-height: 1.4;
+}
+
 blockquote::before {
   content: open-quote;
 }
