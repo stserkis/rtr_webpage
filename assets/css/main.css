@@ -1902,6 +1902,62 @@ button,
           .posts article:last-child:after {
             display: none; } }
 
+
+/* Lightbox */
+.article-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+
+.article-lightbox:target {
+  display: flex;
+}
+
+.article-lightbox-close {
+  position: fixed;
+  inset: 0;
+  border-bottom: 0;
+  z-index: 1;
+  cursor: default;
+}
+
+.article-lightbox img {
+  height: 85vh;
+  width: auto;
+  max-width: 90vw;
+  object-fit: contain;
+  border-radius: 0.375em;
+  position: relative;
+  z-index: 2;
+}
+
+/* Tablet */
+@media screen and (max-width: 980px) {
+  .photo-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 736px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small mobile */
+@media screen and (max-width: 480px) {
+  .photo-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Wrapper */
 #wrapper {
   display: -moz-flex;
